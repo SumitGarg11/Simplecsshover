@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+.logo{
+    position: relative;
+    display: flex;
+}
+.logo span{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo span b{
+    font-size: 6em;
+    font-weight: 700;
+   -webkit-text-stroke: 1px #fff;
+   color: transparent;
+   transition: 0.5s;
+
+
+    
+}
+h1{
+    color: #fff;
+    margin-right: 50px;
+    padding-right: 100px;
+    filter: drop-shadow(18px 40px 1px black);
+}
+.logo span::before{
+    content: '\f179';
+    font-family: fontAwesome;
+    position: absolute;
+    /* black apple uss apple k bilkul uper aa gya after use top: -4px; */
+    top: -4px;
+    left: 0;
+    /* from this witdh i take out apple from the apple */
+    width: 100%;
+    /* from this height black apple go up the from transparent apple  */
+    height: 0%;
+    /* height agin change kar di jab border bottom line ko upen lane k liye */
+    font-size: 6em;
+    overflow: hidden;
+    text-align: center;
+    /* line-height: is used to equal the apple of logo span height */
+    line-height: 120px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    /* iss transition: se upper line or lower line move karti hui show hogi; */
+    transition: 1.5s;
+
+
+}
+.logo span:hover::before{
+    /* iss height se hover karne par niche bhi border bottom radius aa jati hai  */
+    height: 100%;
+    filter: drop-shadow(0 0 20px #fff);
+
+}
+
+
